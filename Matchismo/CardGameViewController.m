@@ -1,5 +1,4 @@
 #import "CardGameViewController.h"
-#import "PlayingCardDeck.h"
 #import "CardMatchingGame.h"
 
 @interface CardGameViewController ()
@@ -18,9 +17,10 @@
     return _game;
 }
 
-- (Deck *)createDeck
+//In objectiveC there is no abstract keyword
+- (Deck *)createDeck//abstract
 {
-    return [[PlayingCardDeck alloc] init];
+    return nil;
 }
 
 - (IBAction)touchCardButton:(UIButton *)sender {
